@@ -1,0 +1,26 @@
+module.exports = Object.freeze({
+  COLLECTIONS: {
+    tbDMDCQG: [],
+    tbDanhMuc: [],
+    tbDanhMucCho:[],
+    tbDanhMucUngDung: [],
+    tbDanhSachDemo: [],
+    tbDonVi: [],
+    tbDonViHanhChinh: [],
+    tbEform: [],
+    tbLinhVuc: [],
+    tbLogApi: [],
+    tbLogs: [],
+    tbMenu: [],
+    tbNhomDanhMuc: [],
+    tbNhomQuyen: [],
+    tbNhomQuyenNguoiDung: [],
+    tbThongKe: [],
+    tbThongTinEform: [],
+    tbThongTinUngDung: [],
+    tbThuocTinhDanhMuc: [],
+    tbUsers: [],
+    tbYKienDongGop: [],
+    test: [],
+  }
+});
