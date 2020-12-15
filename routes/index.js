@@ -40,10 +40,7 @@ router.use('/aggrs', aggrsRouter);
 router.use('/public', publicRouter);
 // DỊCH VỤ CUNG CẤP TỪ KHO CSDL
 router.use('/gsp', gspRouter);
-
 // // demo mongo connect
 // let mongoRouter = require('./mongo');
 // router.use('/mongo', mongoRouter);
-
-
 module.exports = router;

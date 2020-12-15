@@ -55,23 +55,6 @@ module.exports = Object.freeze({
       "Ten": "QL Dữ liệu dùng chung",
       "HanhDong": {}
     },
-    // {
-    //   "Ma": "/tbChucNang",
-    //   "Ten": "QL Chức năng",
-    //   "HanhDong": {}
-    // },
-
-    // {
-    //   "Ma": "/tbDanhSachDemo",
-    //   "Ten": "QL Danh sách demo",
-    //   "HanhDong": {}
-    // },
-
-    // {
-    //   "Ma": "/tbDonViHanhChinh",
-    //   "Ten": "QL Đơn vị hành chính",
-    //   "HanhDong": {}
-    // },
     {
       "Ma": "/tbNhomQuyen",
       "Ten": "QL Nhóm quyền",
@@ -92,36 +75,6 @@ module.exports = Object.freeze({
       "Ten": "QL Linh vuc",
       "HanhDong": {}
     },
-    // {
-    //   "Ma": "/tbNhomQuyenChucNang",
-    //   "Ten": "QL Nhóm quyền chức năng",
-    //   "HanhDong": {}
-    // },
-
-    // {
-    //   "Ma": "/tbThongTinUngDung",
-    //   "Ten": "QL Thông tin",
-    //   "HanhDong": {}
-    // },
-
-    // {
-    //   "Ma": "/tbEform",
-    //   "Ten": "QL Biểu mẫu",
-    //   "HanhDong": {}
-    // },
-    // {
-    //   "Ma": "/tbThongTinEform",
-    //   "Ten": "QL Thông tin biểu mẫu",
-    //   "HanhDong": {}
-    // },
-
-
-    // KHÁC
-    // {
-    //   "Ma": "/gmap",
-    //   "Ten": "Bản đồ",
-    //   "HanhDong": {}
-    // },
     {
       "Ma": "/auth",
       "Ten": "Xác thực",
@@ -147,6 +100,48 @@ module.exports = Object.freeze({
       "Ten": "Media (hình ảnh, file, video)",
       "HanhDong": {}
     },
+    // {
+    //   "Ma": "/tbChucNang",
+    //   "Ten": "QL Chức năng",
+    //   "HanhDong": {}
+    // },
+    // {
+    //   "Ma": "/tbDanhSachDemo",
+    //   "Ten": "QL Danh sách demo",
+    //   "HanhDong": {}
+    // },
+
+    // {
+    //   "Ma": "/tbDonViHanhChinh",
+    //   "Ten": "QL Đơn vị hành chính",
+    //   "HanhDong": {}
+    // },
+    // {
+    //   "Ma": "/tbNhomQuyenChucNang",
+    //   "Ten": "QL Nhóm quyền chức năng",
+    //   "HanhDong": {}
+    // },
+    // {
+    //   "Ma": "/tbThongTinUngDung",
+    //   "Ten": "QL Thông tin",
+    //   "HanhDong": {}
+    // },
+    // {
+    //   "Ma": "/tbEform",
+    //   "Ten": "QL Biểu mẫu",
+    //   "HanhDong": {}
+    // },
+    // {
+    //   "Ma": "/tbThongTinEform",
+    //   "Ten": "QL Thông tin biểu mẫu",
+    //   "HanhDong": {}
+    // },
+    // KHÁC
+    // {
+    //   "Ma": "/gmap",
+    //   "Ten": "Bản đồ",
+    //   "HanhDong": {}
+    // },
     // {
     //   "Ma": "/logwinston",
     //   "Ten": "LogWinston",

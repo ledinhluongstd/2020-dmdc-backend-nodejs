@@ -20,7 +20,7 @@ router.use('/danh-muc', DanhMucRouter);
 router.use('/loai-danh-muc', LoaiDanhMucRouter);
 router.use('/nhom-danh-muc', NhomDanhMucRouter);
 router.use('/thuoc-tinh-danh-muc', ThuocTinhDanhMucRouter);
-router.use('/gsp', GSPRouter);
 router.use('/linh-vuc', LinhVucRouter);
+router.use('/gsp', GSPRouter);
 
 module.exports = router;

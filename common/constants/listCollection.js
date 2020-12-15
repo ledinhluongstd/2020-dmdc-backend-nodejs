@@ -2,12 +2,9 @@ module.exports = Object.freeze({
   COLLECTIONS: {
     tbDMDCQG: [],
     tbDanhMuc: [],
-    tbDanhMucCho:[],
     tbDanhMucUngDung: [],
-    tbDanhSachDemo: [],
     tbDonVi: [],
     tbDonViHanhChinh: [],
-    tbEform: [],
     tbLinhVuc: [],
     tbLogApi: [],
     tbLogs: [],
@@ -16,11 +13,9 @@ module.exports = Object.freeze({
     tbNhomQuyen: [],
     tbNhomQuyenNguoiDung: [],
     tbThongKe: [],
-    tbThongTinEform: [],
     tbThongTinUngDung: [],
     tbThuocTinhDanhMuc: [],
     tbUsers: [],
     tbYKienDongGop: [],
-    test: [],
   }
 });
