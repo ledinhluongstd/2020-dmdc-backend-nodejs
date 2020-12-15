@@ -11,8 +11,8 @@ function initDatabase() {
 
     } else {
       let ctl = await insertClt(key)
-      if (ctl && COLLECTIONS[key].length) {
-        COLLECTIONS[key].map(async (item, index) => {
+      if (ctl && COLLECTIONS[`${key}`].length) {
+        COLLECTIONS[`${key}`].map(async (item, index) => {
           await insertDocuments(item, key)
         })
       }

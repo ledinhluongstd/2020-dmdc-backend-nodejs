@@ -47,11 +47,11 @@ function postDanhMuc(req, res) {
   }
   try {
     req.body.map((item, index) => {
-      req.body[index].createdAt = new Date().getTime();
-      req.body[index].createdBy = req.tokenObj.usr.account;
-      req.body[index].code = new ObjectID().toHexString()
-      req.body[index].isActive = true
-      req.body[index].PheDuyet = 1
+      req.body[`${index}`].createdAt = new Date().getTime();
+      req.body[`${index}`].createdBy = req.tokenObj.usr.account;
+      req.body[`${index}`].code = new ObjectID().toHexString()
+      req.body[`${index}`].isActive = true
+      req.body[`${index}`].PheDuyet = 1
     })
 
     let rhApiUrl = _configs.rh.dataUrl + '/tbDanhMuc'
