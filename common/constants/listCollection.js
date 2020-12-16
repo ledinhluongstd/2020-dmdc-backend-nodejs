@@ -1,6 +1,7 @@
 module.exports = Object.freeze({
   COLLECTIONS: {
     tbDMDCQG: [],
+    tbBanGhiDMDCQG: [],
     tbDanhMuc: [],
     tbDanhMucUngDung: [],
     tbDonVi: [],
@@ -8,6 +9,7 @@ module.exports = Object.freeze({
     tbLinhVuc: [],
     tbLogApi: [],
     tbLogs: [],
+    tbLogDMDCQGApi: [],
     tbMenu: [],
     tbNhomDanhMuc: [],
     tbNhomQuyen: [],

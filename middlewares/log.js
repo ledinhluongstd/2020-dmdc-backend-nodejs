@@ -84,7 +84,7 @@ const mwLog = {
     next()
   },
   generateLogDMDCQGApi: function (req, res, next) {
-    let rhLogUrl = globalConfig.rh.dataUrl + '/tbLogApi';
+    let rhLogUrl = globalConfig.rh.dataUrl + '/tbLogDMDCQGApi';
     let logObj = {
       user: {
         account: req.tokenObj && req.tokenObj.sub ? req.tokenObj.sub : '',

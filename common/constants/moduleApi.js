@@ -46,6 +46,11 @@ module.exports = Object.freeze({
       "HanhDong": {}
     },
     {
+      "Ma": "/tbLogDMDCQGApi", // lưu log gọi api
+      "Ten": "QL Log DMDC Quốc Gia API",
+      "HanhDong": {}
+    },
+    {
       "Ma": "/tbLogs", // lưu log response
       "Ten": "QL Log",
       "HanhDong": {}
