@@ -89,7 +89,6 @@ function post(req, res) {
       }
     })
 
-  // console.log('xxxxxxxxxx', req.body.BanGhi.length)
   // return
   // mgClient.connect(mgUrl, function (err, client) {
   //   if (err) {
@@ -131,29 +130,51 @@ function put(req, res) {
   req.body.modifiedAt = new Date().getTime();
   req.body.modifiedBy = req.tokenObj.usr.account;
   let code = req.params.query;
+
   let BanGhi = JSON.parse(JSON.stringify(req.body.BanGhi))
   let CategoryCode = req.body.CategoryCode
   let rhApiUrl = _configs.rh.dataUrl + '/tbDMDCQG' + req.url;
-  // console.log('xxxxxxxxxx', req.body.BanGhi.length)
-  return
+  let rhApiBanGhiUrl = _configs.rh.dataUrl + '/tbBanGhiDMDCQG';
+
+  req.body.BanGhi = []
   delete req.body.code
-  // return ////
-  mgClient.connect(mgUrl, function (err, client) {
-    if (err) {
-      mwLog.generate(req, constRes.RESPONSE_ERR_DATABASE);
-      res.status(constRes.RESPONSE_ERR_DATABASE.status).send(constRes.RESPONSE_ERR_DATABASE.body);
-    } else {
-      client.db(_configs.mongodb.db).collection('tbDMDCQG').updateOne(
-        { 'code': code }, { "$set": req.body }
-      ).then(function (v) {
-        mwLog.generate(req, v);
-        res.status(200).send({ size: v.length, data: v });
-      }, function (e) {
-        mwLog.generate(req, e);
-        res.status(constRes.RESPONSE_ERR_DATABASE.status).send(constRes.RESPONSE_ERR_DATABASE.body);
+  utils.Axios('put', rhApiUrl, req.body)//method, url, data
+    .then(async function (rhApiRes) {
+
+      //xóa các bản ghi cũ
+      await utils.Axios('delete', rhApiBanGhiUrl + '/*?' + `filter={"CategoryCode": "` + CategoryCode + `" }`)
+      //thêm bản ghi mới với mã CategoryCode tương ứng
+      BanGhi.map(async (item, index) => {
+        BanGhi[index].CategoryCode = CategoryCode
       })
-    }
-  })
+      await utils.AxiosNonTimeout('post', rhApiBanGhiUrl, BanGhi)
+
+      mwLog.generate(req, { status: rhApiRes.status, body: rhApiRes.data });
+      res.status(rhApiRes.status).send(rhApiRes.data);
+    }).catch(function (rhApiErr) {
+      try {
+        mwLog.generate(req, { status: rhApiErr.response.status, body: rhApiErr.response.data });
+        res.status(rhApiErr.response.status).send(rhApiErr.response.data);
+      } catch (e) {
+        res.status(constRes.RESPONSE_ERR_DATABASE.status).send(constRes.RESPONSE_ERR_DATABASE.body);
+      }
+    })
+  // mgClient.connect(mgUrl, function (err, client) {
+  //   if (err) {
+  //     mwLog.generate(req, constRes.RESPONSE_ERR_DATABASE);
+  //     res.status(constRes.RESPONSE_ERR_DATABASE.status).send(constRes.RESPONSE_ERR_DATABASE.body);
+  //   } else {
+  //     client.db(_configs.mongodb.db).collection('tbDMDCQG').updateOne(
+  //       { 'code': code }, { "$set": req.body }
+  //     ).then(function (v) {
+  //       mwLog.generate(req, v);
+  //       res.status(200).send({ size: v.length, data: v });
+  //     }, function (e) {
+  //       mwLog.generate(req, e);
+  //       res.status(constRes.RESPONSE_ERR_DATABASE.status).send(constRes.RESPONSE_ERR_DATABASE.body);
+  //     })
+  //   }
+  // })
   // utils.Axios('put', rhApiUrl, req.body)//method, url, data
   //   .then(function (rhApiRes) {
   //     mwLog.generate(req, { status: rhApiRes.status, body: rhApiRes.data });

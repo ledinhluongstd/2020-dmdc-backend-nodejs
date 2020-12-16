@@ -11,7 +11,6 @@ router.use(bodyParser.json());
 
 function menu(req, res) {
   let rhApiUrl = _configs.rh.dataUrl + '/tbMenu'
-  console.log(rhApiUrl)
   utils.Axios('get', rhApiUrl)
     .then(function (rhApiRes) {
       mwLog.generate(req, { status: rhApiRes.status, body: rhApiRes.data });

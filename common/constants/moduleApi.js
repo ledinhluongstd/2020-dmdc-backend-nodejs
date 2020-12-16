@@ -31,6 +31,11 @@ module.exports = Object.freeze({
       "HanhDong": {}
     },
     {
+      "Ma": "/tbBanGhiDMDCQG",
+      "Ten": "QL Dữ liệu Danh mục dùng chung quốc gia",
+      "HanhDong": {}
+    },
+    {
       "Ma": "/tbYKienDongGop",
       "Ten": "QL Ý kiến đóng góp",
       "HanhDong": {}

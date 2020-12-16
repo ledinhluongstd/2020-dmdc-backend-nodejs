@@ -20,6 +20,7 @@ let tbThuocTinhDanhMucRouter = require('./data/tbThuocTinhDanhMuc');
 let tbYKienDongGopRouter = require('./data/tbYKienDongGop');
 let tbThongKeRouter = require('./data/tbThongKe');
 let tbDMDCQGRouter = require('./data/tbDMDCQG');
+let tbBanGhiDMDCQGRouter = require('./data/tbBanGhiDMDCQG');
 
 let importExcelRouter = require('./data/importExcel');
 
@@ -49,6 +50,7 @@ router.use('/tbThuocTinhDanhMuc', tbThuocTinhDanhMucRouter);
 router.use('/tbYKienDongGop', tbYKienDongGopRouter);
 router.use('/tbThongKe', tbThongKeRouter);
 router.use('/tbDMDCQG', tbDMDCQGRouter);
+router.use('/tbBanGhiDMDCQG', tbBanGhiDMDCQGRouter);
 
 router.use('/import-excel', importExcelRouter);
 

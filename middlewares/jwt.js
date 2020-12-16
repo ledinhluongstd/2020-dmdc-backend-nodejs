@@ -77,7 +77,8 @@ let mwJWT = {
         } else {
           let checkPermission = 0
           permission.ChucNang.forEach((item) => {
-            if (req.originalUrl.includes(item.Ma) && item.HanhDong[req.method] && checkPermission === 0) {
+            let checkMethod = req.method === 'PUT' ? item.HanhDong['PATCH'] : false
+            if (req.originalUrl.includes(item.Ma) && (item.HanhDong[req.method] || checkMethod) && checkPermission === 0) {
               checkPermission++;
               next()
             }

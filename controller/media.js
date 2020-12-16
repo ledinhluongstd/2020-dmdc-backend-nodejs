@@ -12,7 +12,6 @@ function upload(req, res) {
     documents: [],
   };
   let types = ['videos', 'images', 'documents'];
-  console.log(req.files)
   types.forEach(type => {
     if (req.files[type] && req.files[type].length) {
       for (let i = 0; i < req.files[type].length; i++) {
