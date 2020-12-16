@@ -24,4 +24,19 @@ function Axios2(method, url, data) {
     timeout: 5000
   })
 };
-export { Axios, Axios2 }
+
+function AxiosNonTimeout(method, url, data) {
+  return axios({
+    method: method,
+    url: url,
+    data: data,
+    maxContentLength: Infinity,
+    maxBodyLength: Infinity,
+    headers: {
+      'Authorization': 'Basic ' + getAccessToken(),
+    },
+    // timeout: 5000
+  })
+};
+
+export { Axios, Axios2, AxiosNonTimeout }
